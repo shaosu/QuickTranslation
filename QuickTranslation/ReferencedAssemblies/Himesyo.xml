@@ -1,0 +1,3688 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Himesyo</name>
+    </assembly>
+    <members>
+        <member name="T:Himesyo.Check.HashExtend">
+            <summary>
+            Hash 扩展
+            </summary>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeMD5(System.String,System.Text.Encoding)">
+            <summary>
+            获取指定字符串的 MD5 校验值，默认编码为 UTF-8 。
+            </summary>
+            <param name="data">要校验的字符串</param>
+            <param name="encoding">字符串编码，默认为 UTF-8 。</param>
+            <returns>字符串的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeMD5(System.Byte[])">
+            <summary>
+            获取指定字节数组的 MD5 校验值。
+            </summary>
+            <param name="data">要校验的字节数组</param>
+            <returns>字节数组的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeMD5(System.IO.Stream)">
+            <summary>
+            获取指定流的 MD5 校验值。
+            </summary>
+            <param name="stream">要校验的流</param>
+            <returns>流的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeSHA1(System.String,System.Text.Encoding)">
+            <summary>
+            获取指定字符串的 SHA1 校验值，默认编码为 UTF-8 。
+            </summary>
+            <param name="data">要校验的字符串</param>
+            <param name="encoding">字符串编码，默认为 UTF-8 。</param>
+            <returns>字符串的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeSHA1(System.Byte[])">
+            <summary>
+            获取指定字节数组的 SHA1 校验值。
+            </summary>
+            <param name="data">要校验的字节数组</param>
+            <returns>字节数组的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeSHA1(System.IO.Stream)">
+            <summary>
+            获取指定流的 SHA1 校验值。
+            </summary>
+            <param name="stream">要校验的流</param>
+            <returns>流的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeSHA256(System.String,System.Text.Encoding)">
+            <summary>
+            获取指定字符串的 SHA256 校验值，默认编码为 UTF-8 。
+            </summary>
+            <param name="data">要校验的字符串</param>
+            <param name="encoding">字符串编码，默认为 UTF-8 。</param>
+            <returns>字符串的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeSHA256(System.Byte[])">
+            <summary>
+            获取指定字节数组的 SHA256 校验值。
+            </summary>
+            <param name="data">要校验的字节数组</param>
+            <returns>字节数组的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ComputeSHA256(System.IO.Stream)">
+            <summary>
+            获取指定流的 SHA256 校验值。
+            </summary>
+            <param name="stream">要校验的流</param>
+            <returns>流的校验值</returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ToShow(System.Byte[])">
+            <summary>
+            将字节数组转换为可见字符串，默认格式为十六进制小写字符串。
+            </summary>
+            <param name="data">要转换的字节数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Check.HashExtend.ToShow(System.Byte[],System.String)">
+            <summary>
+            将字节数组转换为可见字符串。
+            </summary>
+            <param name="data">要转换的字节数组</param>
+            <param name="format">转换格式，即 <see cref="M:System.Byte.ToString(System.String)"/> 的参数。</param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Collections.BackQueue`1">
+            <summary>
+            表示一个具有固定容量、可随机访问、倒向索引的集合。超过集合容量时，移除最早添加的对象。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.#ctor(System.Int32)">
+            <summary>
+            使用最大容量初始化集合。
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException"> <paramref name="maxCapacity"/> 小于 0 。</exception>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            使用指定集合中的元素和最大容量初始化集合。如果集合中的元素数量大于 <paramref name="maxCapacity"/> ，则将超出范围的数量的元素从集合前方移除。
+            </summary>
+            <exception cref="T:System.ArgumentNullException"> <paramref name="collection"/> 为 <see langword="null"/> 。</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"> <paramref name="maxCapacity"/> 小于 0。</exception>
+        </member>
+        <member name="P:Himesyo.Collections.BackQueue`1.Capacity">
+            <summary>
+            获取当前集合的容量。它是固定的。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.AddRange(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            添加一个集合。
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Remove">
+            <summary>
+            移除最开始添加的元素。如果集合中没有元素，则什么也不做。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Remove(System.Int32)">
+            <summary>
+            移除指定数量的最开始添加的元素。如果集合中没有元素，则什么也不做。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.RemoveLast(System.Int32)">
+            <summary>
+            移除指定数量的最后添加的元素。如果集合中没有元素，则什么也不做。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.SetCount(System.Int32)">
+            <summary>
+            设置集合中的元素数量，将最开始添加的元素舍弃。
+            </summary>
+            <param name="newCount"></param>
+            <exception cref="T:System.ArgumentOutOfRangeException"> <paramref name="newCount"/> 值小于 0 或大于当前的元素总数。</exception>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Copy(System.Int32)">
+            <summary>
+            创建一个新 <see cref="T:Himesyo.Collections.BackQueue`1"/> 集合，它拥有指定长度并从当前集合复制最后添加的元素。
+            </summary>
+            <param name="newCount"></param>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Refresh">
+            <summary>
+            刷新集合。清除已被移除但依然保留的元素引用。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.BackQueue`1.IsSynchronized">
+            <summary>
+            获取一个值，该值指示是否同步对 <see cref="T:Himesyo.Collections.BackQueue`1"/> 的访问（线程安全）。
+            </summary>
+            <result>如果对 <see cref="T:Himesyo.Collections.BackQueue`1"/> 的访问是同步的（线程安全），则为 <see langword="true"/> ；否则为 <see langword="false"/> 。</result>
+        </member>
+        <member name="P:Himesyo.Collections.BackQueue`1.SyncRoot">
+            <summary>
+            获取可用于同步对 <see cref="T:Himesyo.Collections.BackQueue`1"/> 的访问的对象。
+            </summary>
+            <result>可用于同步对 <see cref="T:Himesyo.Collections.BackQueue`1"/> 的访问的对象。</result>
+        </member>
+        <member name="P:Himesyo.Collections.BackQueue`1.Item(System.Int32)">
+            <summary>
+            获取指定索引处的元素。0 表示最后添加的元素。
+            </summary>
+            <param name="index">索引</param>
+            <returns></returns>
+        </member>
+        <member name="P:Himesyo.Collections.BackQueue`1.Count">
+            <summary>
+            返回列表中的实际数量。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Add(`0)">
+            <summary>
+            将指定元素添加到集合末尾。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Clear">
+            <summary>
+            清空集合。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.Contains(`0)">
+            <summary>
+            确定 <see cref="T:Himesyo.Collections.BackQueue`1"/> 是否包含特定值。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.GetEnumerator">
+            <summary>
+            返回一个循环访问集合的枚举器
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.IndexOf(`0)">
+            <summary>
+            确定 <see cref="T:Himesyo.Collections.BackQueue`1"/> 中特定项的索引。
+            </summary>
+            <param name="item"></param>
+            <returns>如果在列表中找到，则为 item 的索引；否则为 -1。</returns>
+        </member>
+        <member name="M:Himesyo.Collections.BackQueue`1.CopyTo(`0[],System.Int32)">
+            <summary>
+            从特定的 <paramref name="arrayIndex"/> 索引处开始，将 <see cref="T:Himesyo.Collections.BackQueue`1"/> 的元素复制到一个 <see cref="T:System.Array"/> 中。
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="T:Himesyo.Collections.DictionaryCollection`1">
+            <summary>
+            可 Xml 序列化的键为 <see langword="string"/> 类型的字典集合。<typeparamref name="TValue"/> 必须可进行 Xml 序列化。
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="E:Himesyo.Collections.DictionaryCollection`1.ItemChanged">
+            <summary>
+            在项列表改变时通知。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.DefaultView">
+            <summary>
+            用于显示此字典的默认视图。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.#ctor">
+            <summary>
+            初始化具有默认大小的新实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.#ctor(System.Collections.Generic.IDictionary{System.String,`0})">
+            <summary>
+            使用指定字典集合初始化新实例。
+            </summary>
+            <param name="pairs"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化构造函数
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.RemoveWhere(System.Predicate{System.Collections.Generic.KeyValuePair{System.String,`0}})">
+            <summary>
+            根据指定谓词移除所有符合条件的项。
+            </summary>
+            <param name="match"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.RemoveWhere(System.Predicate{System.Collections.Generic.KeyValuePair{System.String,`0}},System.Int32)">
+            <summary>
+            根据指定谓词移除最多数量个符合条件的项。
+            </summary>
+            <param name="match"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Clone">
+            <summary>
+            创建副本。如果 <typeparamref name="TValue"/> 实现 <see cref="T:System.ICloneable"/> ，则使用 <see cref="M:System.ICloneable.Clone"/> 创建 <typeparamref name="TValue"/> 的副本。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.OnItemChanged(Himesyo.Collections.ItemChangedEventArgs{`0})">
+            <summary>
+            触发 <see cref="E:Himesyo.Collections.DictionaryCollection`1.ItemChanged"/> 事件。
+            </summary>
+            <param name="eventArgs"></param>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.Item(System.String)">
+            <summary>
+            根据键获取值，如果未找到指定键则返回 <see langword="null"/> .
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.Keys">
+            <summary>
+            键集合
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.Values">
+            <summary>
+            值集合
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.Count">
+            <summary>
+            实际包含的元素数。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.IsReadOnly">
+            <summary>
+            是否只读。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.System#Collections#IDictionary#IsFixedSize">
+            <summary>
+            是否固定大小。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.DictionaryCollection`1.SyncRoot">
+            <summary>
+            获取一个可用于同步对 <see cref="T:Himesyo.Collections.DictionaryCollection`1"/> 的访问的对象。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Add(System.String,`0)">
+            <summary>
+            添加新对象。
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Add(System.Collections.Generic.KeyValuePair{System.String,`0})">
+            <summary>
+            添加新对象。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Clear">
+            <summary>
+            清空集合。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Contains(System.Collections.Generic.KeyValuePair{System.String,`0})">
+            <summary>
+            指定键值对是否存在。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.ContainsKey(System.String)">
+            <summary>
+            指定键是否存在。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.CopyTo(System.Collections.Generic.KeyValuePair{System.String,`0}[],System.Int32)">
+            <summary>
+            将集合内的所有元素复制到指定数组
+            </summary>
+            <param name="array"></param>
+            <param name="arrayIndex"></param>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.GetEnumerator">
+            <summary>
+            获取枚举器。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Remove(System.String)">
+            <summary>
+            移除指定键。
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.Remove(System.Collections.Generic.KeyValuePair{System.String,`0})">
+            <summary>
+            移除指定对象。
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.DictionaryCollection`1.TryGetValue(System.String,`0@)">
+            <summary>
+            尝试获取值。
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Collections.ItemChangedEventHandler`1">
+            <summary>
+            当用户修改 <see cref="T:Himesyo.Collections.DictionaryCollection`1"/> 集合时所调用的事件处理程序类。
+            </summary>
+            <param name="sender">事件源。</param>
+            <param name="e">包含事件数据的 <see cref="T:Himesyo.Collections.ItemChangedEventArgs`1"/></param>
+        </member>
+        <member name="T:Himesyo.Collections.ItemChangedEventArgs`1">
+            <summary>
+            为 <see cref="E:Himesyo.Collections.DictionaryCollection`1.ItemChanged"/> 事件提供数据。
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="P:Himesyo.Collections.ItemChangedEventArgs`1.Type">
+            <summary>
+            改变的类型
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.ItemChangedEventArgs`1.Key">
+            <summary>
+            改变的键值。如果是 <see cref="F:Himesyo.Collections.ChangedType.Clear"/> ，则为 <see langword="null"/> 。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.ItemChangedEventArgs`1.ChangedValue">
+            <summary>
+            改变的值。如果是 <see cref="F:Himesyo.Collections.ChangedType.Clear"/> ，则为 <see langword="default"/> 。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.ItemChangedEventArgs`1.OldValue">
+            <summary>
+            原来的值。如果是 <see cref="F:Himesyo.Collections.ChangedType.Add"/> ，则为 <see langword="default"/> 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.ItemChangedEventArgs`1.#ctor(Himesyo.Collections.ChangedType,System.String,`0,`0)">
+            <summary>
+            使用指定值初始化新实例。
+            </summary>
+            <param name="changedType"></param>
+            <param name="key"></param>
+            <param name="changedValue"></param>
+            <param name="oldValue"></param>
+        </member>
+        <member name="T:Himesyo.Collections.ChangedType">
+            <summary>
+            <see cref="T:Himesyo.Collections.DictionaryCollection`1"/> 项改变时的改变类型。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Collections.ChangedType.Add">
+            <summary>
+            添加。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Collections.ChangedType.Remove">
+            <summary>
+            移除。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Collections.ChangedType.Update">
+            <summary>
+            更新。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Collections.ChangedType.Clear">
+            <summary>
+            清空。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Collections.DictionaryView`1">
+            <summary>
+            提供对 <see cref="T:Himesyo.Collections.DictionaryCollection`1"/> 的显示。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Himesyo.Collections.TopComparer`1">
+            <summary>
+            带有自定义权值的比较器。可用于指定值置顶或置底。比较对象必须重写 <see cref="M:System.Object.ToString"/> 方法才可以置顶。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.TopComparer`1.#ctor(System.Collections.Generic.Dictionary{`0,System.Int32},System.Collections.Generic.IEqualityComparer{`0})">
+            <summary>
+            值和权重的字典。值越大表示越靠前。
+            </summary>
+            <param name="weight"></param>
+            <param name="comparer"></param>
+        </member>
+        <member name="M:Himesyo.Collections.TopComparer`1.Compare(`0,`0)">
+            <summary>
+            比较指定对象。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Collections.TopComparer">
+            <summary>
+            带有自定义权值的比较器。可用于指定值置顶或置底。比较对象必须重写 <see cref="M:System.Object.ToString"/> 方法才可以置顶。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.TopComparer.#ctor(System.Collections.Generic.Dictionary{System.Object,System.Int32},System.Collections.Generic.IEqualityComparer{System.Object})">
+            <summary>
+            值和权重的字典。值越大表示越靠前。
+            </summary>
+            <param name="weight"></param>
+            <param name="comparer">为 <see langword="null"/> 时使用默认比较器。</param>
+        </member>
+        <member name="M:Himesyo.Collections.TopComparer.Compare(System.Object,System.Object)">
+            <summary>
+            比较指定对象。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Collections.ToStringComparer`1">
+            <summary>
+            将值转化为 <see langword="string"/> 类型再进行比较的比较器。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Himesyo.Collections.ToStringComparer`1.StringComparer">
+            <summary>
+            转换为字符串后比较使用的比较器。如果为 <see langword="null"/> ，使用默认比较器。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Collections.ToStringComparer`1.StringValueGetter">
+            <summary>
+            字符串值的获取器。如果为 <see langword="null"/> ，使用 <see cref="M:System.Object.ToString"/> 获取。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Collections.ToStringComparer`1.Equals(`0,`0)">
+            <summary>
+            使用指定的值获取器和比较器判断是否相等。
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Collections.ToStringComparer`1.GetHashCode(`0)">
+            <summary>
+            使用指定的值获取器获取字符串的哈希代码。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.CommandLines">
+            <summary>
+            标准命令行信息
+            </summary>
+        </member>
+        <member name="M:Himesyo.CommandLines.AnalysisLines(System.String)">
+            <summary>
+            将单行命令分析为字符串数组。
+            </summary>
+            <param name="cmdLine"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Himesyo.CommandLines.HasCommandLine">
+            <summary>
+            是否含有命令行
+            </summary>
+        </member>
+        <member name="P:Himesyo.CommandLines.Values">
+            <summary>
+            全局参数外的其他参数值。
+            </summary>
+        </member>
+        <member name="M:Himesyo.CommandLines.#ctor(System.String,System.String[])">
+            <summary>
+            使用指定命令行和全局参数名称初始化 <see cref="T:Himesyo.CommandLines"/> 类型的新实例。
+            </summary>
+            <param name="arg"></param>
+            <param name="globalArgs"></param>
+        </member>
+        <member name="M:Himesyo.CommandLines.#ctor(System.String[],System.String[])">
+            <summary>
+            使用指定命令行和全局参数名称初始化 <see cref="T:Himesyo.CommandLines"/> 类型的新实例。
+            </summary>
+            <param name="args"></param>
+            <param name="globalArgs"></param>
+        </member>
+        <member name="P:Himesyo.CommandLines.Item(System.String)">
+            <summary>
+            获取指定名称参数的值。输入 <see langword="null"/> 获取所有无名称的参数值。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.CommandLines.HasGlobalValue(System.String)">
+            <summary>
+            是否存在指定全局参数。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.CommandLines.HasValue(System.String)">
+            <summary>
+            是否存在指定非全局参数。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.CommandLines.EnumerableValues">
+            <summary>
+            按用户输入顺序枚举所有非全局参数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.ArgValue">
+            <summary>
+            表示一个参数值。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ArgValue.Name">
+            <summary>
+            参数名称。可为 <see langword="null"/> 。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ArgValue.Value">
+            <summary>
+            参数值。不可为 <see langword="null"/> 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ArgValue.#ctor(System.String,System.String)">
+            <summary>
+            使用指定名称和值初始化 <see cref="T:Himesyo.ArgValue"/> 类型的新实例。
+            </summary>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:Himesyo.Data.DatabaseExtend">
+            <summary>
+            为数据库相关提供常用扩展
+            </summary>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create(System.Type,System.String)">
+            <summary>
+            创建数据库相关类型。
+            </summary>
+            <param name="relevantType"></param>
+            <param name="createType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbConnection)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbConnectionStringBuilder)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbCommand)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbCommandBuilder)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbDataAdapter)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbDataReader)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbParameter)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbTransaction)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.Create``1(System.Data.Common.DbDataRecord)">
+            <summary>
+            创建指定类型的数据库对象。<typeparamref name="TDatabase"/> 应是数据库基类型之一。
+            </summary>
+            <typeparam name="TDatabase"></typeparam>
+            <param name="relevantObj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.ExistColumn(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            是否存在指定列。
+            </summary>
+            <param name="dataReader"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Data.DatabaseExtend.GetValue``1(System.Data.Common.DbDataReader,System.String)">
+            <summary>
+            获取指定列的值。
+            </summary>
+            <param name="dataReader"></param>
+            <param name="columnName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Drawing.Complex">
+            <summary>
+            复数类型
+            </summary>
+        </member>
+        <member name="P:Himesyo.Drawing.Complex.Re">
+            <summary>
+            实部
+            </summary>
+        </member>
+        <member name="P:Himesyo.Drawing.Complex.Im">
+            <summary>
+            虚部
+            </summary>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.#ctor(System.Double,System.Double)">
+            <summary>
+            使用指定实部和虚部初始化 <see cref="T:Himesyo.Drawing.Complex"/> 类型的新实例。
+            </summary>
+            <param name="re"></param>
+            <param name="im"></param>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_LogicalNot(Himesyo.Drawing.Complex)">
+            <summary>
+            返回共轭
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.Modulus">
+            <summary>
+            返回模长
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.ModulusSquare">
+            <summary>
+            返回模长的平方
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.Arg">
+            <summary>
+            返回幅角
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Addition(Himesyo.Drawing.Complex,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Addition(System.Double,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Addition(Himesyo.Drawing.Complex,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Subtraction(Himesyo.Drawing.Complex,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Subtraction(System.Double,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Subtraction(Himesyo.Drawing.Complex,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_UnaryNegation(Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Multiply(Himesyo.Drawing.Complex,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Multiply(System.Double,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Multiply(Himesyo.Drawing.Complex,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Division(Himesyo.Drawing.Complex,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Division(System.Double,Himesyo.Drawing.Complex)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Division(Himesyo.Drawing.Complex,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.op_Implicit(System.Double)~Himesyo.Drawing.Complex">
+            <summary>
+            将一个实数类型强制转换为一个仅有实部的复数类型(事实上一般是不必要的，因为所有复数四则运算都重载了以实数为参数之一)
+            </summary>
+        </member>
+        <member name="M:Himesyo.Drawing.Complex.ToString">
+            <summary>
+            返回复数的字符串形式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Drawing.Constants">
+            <summary>
+            常数
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.Constants.PI">
+            <summary>
+            圆周率π
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.Constants.E">
+            <summary>
+            自然底数e
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.Constants.γ">
+            <summary>
+            欧拉常数γ
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.Constants.δ">
+            <summary>
+            混沌常数δ
+            </summary>
+        </member>
+        <member name="T:Himesyo.Drawing.MathComplex">
+            <summary>
+            复数域的数学函数类
+            </summary>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Exp(Himesyo.Drawing.Complex)">
+            <summary>
+            指数函数，返回以e为底的指定复数次幂
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Cos(Himesyo.Drawing.Complex)">
+            <summary>
+            余弦函数，返回指定复数的余弦值
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Sin(Himesyo.Drawing.Complex)">
+            <summary>
+            正弦函数，返回指定复数的正弦值
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Tan(Himesyo.Drawing.Complex)">
+            <summary>
+            正切函数，返回指定复数的正切值
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Cot(Himesyo.Drawing.Complex)">
+            <summary>
+            余切函数，返回指定复数的余切值
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Sec(Himesyo.Drawing.Complex)">
+            <summary>
+            正割函数，返回指定复数的正割值
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Csc(Himesyo.Drawing.Complex)">
+            <summary>
+            余割函数，返回指定复数的余割值
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Log(Himesyo.Drawing.Complex)">
+            <summary>
+            对数函数，返回以e为底的指定复数的对数
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Sqrt(Himesyo.Drawing.Complex)">
+            <summary>
+            返回指定复数的平方根
+            </summary>
+            <param name="a">一个复数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Pow(Himesyo.Drawing.Complex,Himesyo.Drawing.Complex)">
+            <summary>
+            指数函数，返回指定复数为底，指定复数次幂
+            </summary>
+            <param name="a">指数</param>
+            <param name="b">底数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Log(Himesyo.Drawing.Complex,Himesyo.Drawing.Complex)">
+            <summary>
+            返回指定底的对数
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Asin(Himesyo.Drawing.Complex)">
+            <summary>
+            反正弦函数
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Acos(Himesyo.Drawing.Complex)">
+            <summary>
+            反余弦函数
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Drawing.MathComplex.Atan(Himesyo.Drawing.Complex)">
+            <summary>
+            反正切函数
+            </summary>
+            <param name="a"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Drawing.PointP">
+            <summary>
+            极坐标点
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointP.Empty">
+            <summary>
+            表示 <see cref="T:Himesyo.Drawing.PointP"/> 类的、成员数据未被初始化的新实例。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Drawing.PointP.R">
+            <summary>
+            半径坐标
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointP.polarAngle">
+            <summary>
+            极角
+            </summary>
+        </member>
+        <member name="P:Himesyo.Drawing.PointP.T">
+            <summary>
+            极角
+            </summary>
+        </member>
+        <member name="M:Himesyo.Drawing.PointP.#ctor(System.Single,System.Single)">
+            <summary>
+            用指定坐标初始化 <see cref="T:Himesyo.Drawing.PointP"/> 类的新实例。
+            </summary>
+            <param name="r">半径坐标</param>
+            <param name="t">极角</param>
+        </member>
+        <member name="T:Himesyo.Drawing.PointC">
+            <summary>
+            复平面点
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointC.Empty">
+            <summary>
+            表示 <see cref="T:Himesyo.Drawing.PointC"/> 类的、成员数据未被初始化的新实例。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Drawing.PointC.R">
+            <summary>
+            实轴坐标
+            </summary>
+        </member>
+        <member name="P:Himesyo.Drawing.PointC.I">
+            <summary>
+            虚轴坐标
+            </summary>
+        </member>
+        <member name="M:Himesyo.Drawing.PointC.#ctor(System.Single,System.Single)">
+            <summary>
+            用指定坐标初始化 <see cref="T:Himesyo.Drawing.PointC"/> 类的新实例。
+            </summary>
+            <param name="r">实轴坐标</param>
+            <param name="i">虚轴坐标</param>
+        </member>
+        <member name="T:Himesyo.Drawing.PointConverter">
+            <summary>
+            坐标转换器
+            </summary>
+        </member>
+        <member name="T:Himesyo.Drawing.PointConverter.PointType">
+            <summary>
+            坐标类型
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointConverter.PointType.Empty">
+            <summary>
+            未指定
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointConverter.PointType.CartesianPoint">
+            <summary>
+            笛卡尔坐标
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointConverter.PointType.ComplexPoint">
+            <summary>
+            复平面坐标
+            </summary>
+        </member>
+        <member name="F:Himesyo.Drawing.PointConverter.PointType.PolarPoint">
+            <summary>
+            极坐标
+            </summary>
+        </member>
+        <member name="T:Himesyo.ExceptionHelper">
+            <summary>
+            提供与抛出异常、显示异常等辅助方法。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowNull``1(``0,System.String)">
+            <summary>
+            当 <paramref name="value"/> 为 <see langword="null"/> 时，抛出 <see cref="T:System.ArgumentNullException"/> 异常。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowArgument(System.Boolean,System.String,System.String)">
+            <summary>
+            当 <paramref name="condition"/> 为 <see langword="true"/> 时，抛出 <see cref="T:System.ArgumentException"/> 异常。
+            </summary>
+            <param name="condition"></param>
+            <param name="message"></param>
+            <param name="paramName"></param>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowInvalid(System.Boolean,System.String)">
+            <summary>
+            当 <paramref name="condition"/> 为 <see langword="true"/> 时，抛出 <see cref="T:System.InvalidOperationException"/> 异常。
+            </summary>
+            <param name="condition"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowIndexOut(System.Boolean,System.String)">
+            <summary>
+            当 <paramref name="condition"/> 为 <see langword="true"/> 时，抛出 <see cref="T:System.IndexOutOfRangeException"/> 异常。
+            </summary>
+            <param name="condition"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowArgumentOut(System.Boolean,System.String,System.Object,System.String)">
+            <summary>
+            当 <paramref name="condition"/> 为 <see langword="true"/> 时，抛出 <see cref="T:System.ArgumentOutOfRangeException"/> 异常。
+            </summary>
+            <param name="condition"></param>
+            <param name="paramName"></param>
+            <param name="actualValue">实际值。</param>
+            <param name="message"></param>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.NotSupported">
+            <summary>
+            返回 <see cref="T:System.NotSupportedException"/> 异常。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowNotSupported(System.String)">
+            <summary>
+            抛出 <see cref="T:System.NotSupportedException"/> 异常。
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ObjectDisposed(System.String)">
+            <summary>
+            返回 <see cref="T:System.ObjectDisposedException"/> 异常。
+            </summary>
+            <param name="objectName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExceptionHelper.ThrowObjectDisposed(System.String,System.String)">
+            <summary>
+            抛出 <see cref="T:System.ObjectDisposedException"/> 异常。
+            </summary>
+            <param name="objectName"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:Himesyo.ExtendCorrelation">
+            <summary>
+            提供一些常用类型的扩展方法
+            </summary>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.ToDouble(System.String)">
+            <summary>
+            将当前字符串转化为数字。遇到数字中不能出现的字符会停止，可以获取开头的负号和最多一个小数点。
+            </summary>
+            <param name="str">要进行转化的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.ToInt32(System.String)">
+            <summary>
+            将当前字符串转化为数字。遇到整型数字中不能出现的字符会停止，可以获取开头的负号。
+            </summary>
+            <param name="str">要进行转化的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.ToInt64(System.String)">
+            <summary>
+            将当前字符串转化为数字。遇到整型数字中不能出现的字符会停止，可以获取开头的负号。
+            </summary>
+            <param name="str">要进行转化的字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.FormatEmpty(System.String)">
+            <summary>
+            当字符串为 <see langword="null"/>、空或仅由空白字符组成时返回空字符串，否则返回原值。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.FormatNull(System.String)">
+            <summary>
+            当字符串为 <see langword="null"/>、空或仅由空白字符组成时返回 <see langword="null"/> ，否则返回原值。
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.FormatNull(System.String,System.String)">
+            <summary>
+            当字符串为 <see langword="null"/>、空或仅由空白字符组成时返回 <paramref name="defaultValue"/> ，否则返回原值。
+            </summary>
+            <param name="str">原字符串</param>
+            <param name="defaultValue">原字符串为空时要返回的默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.NextValue(System.String)">
+            <summary>
+            获取下一个值。
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.NextValue(System.String,Himesyo.DigitType)">
+            <summary>
+            使用指定类型获取下一个值。
+            </summary>
+            <param name="value"></param>
+            <param name="digitType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.SureEndString(System.Text.StringBuilder,System.String)">
+            <summary>
+            确认字符串的结尾是否是指定字符串，如果不是则添加。
+            </summary>
+            <param name="sb"></param>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ExtendCorrelation.TrimEnd(System.Text.StringBuilder,System.String,System.Boolean)">
+            <summary>
+            移除尾部所有符合条件的字符(串)。
+            </summary>
+            <param name="sb"></param>
+            <param name="str">要移除的字符串</param>
+            <param name="isCompleteStr">是否将字符串视为整体。如果为 <see langword="false"/> ，则将字符串视为字符集合。</param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.DigitType">
+            <summary>
+            十进制类型和状态。可包含一个非状态位和任意个状态位。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Default">
+            <summary>
+            默认（全部类型，全部数字）
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.First">
+            <summary>
+            只修改找到的第一个类型。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.MaxError">
+            <summary>
+            <see langword="[状态]"/> 如果超过最大值则抛出 <see cref="T:System.ArgumentOutOfRangeException"/> 异常。否则返回 <see langword="null"/> 。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Continuity">
+            <summary>
+            <see langword="[状态]"/> 搜索连续的数字。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.FixedLength">
+            <summary>
+            <see langword="[状态]"/> 总长度固定。
+            如果指定了 <see cref="F:Himesyo.DigitType.TrimStart"/> 或 <see cref="F:Himesyo.DigitType.TrimEnd"/> ，则向前进位并移除一个空字符。
+            如果未指定或首尾均不包含空字符，则根据 <see cref="F:Himesyo.DigitType.MaxError"/> 返回 <see langword="null"/> 或抛出异常。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.NoNumberAdd">
+            <summary>
+            <see langword="[状态]"/> 如果未找到符合的数字，则在最后添加数字。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.TrimStart">
+            <summary>
+            <see langword="[状态]"/> 进位时首先移除尾部空字符。
+            与 <see cref="F:Himesyo.DigitType.TrimEnd"/> 同时存在时仅 <see cref="F:Himesyo.DigitType.TrimStart"/> 生效。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.TrimEnd">
+            <summary>
+            <see langword="[状态]"/> 进位时首先移除首部空字符。
+            仅当含有 <see cref="F:Himesyo.DigitType.FixedLength"/> 值时有效。
+            与 <see cref="F:Himesyo.DigitType.TrimStart"/> 同时存在时仅 <see cref="F:Himesyo.DigitType.TrimStart"/> 生效。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.TrimOther">
+            <summary>
+            <see langword="[状态]"/> 首尾均可移除。
+            仅当含有 <see cref="F:Himesyo.DigitType.TrimEnd"/> 或 <see cref="F:Himesyo.DigitType.TrimStart"/> 时有效。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.AutoName">
+            <summary>
+            <see langword="[状态]"/> 对于默认名称的推荐状态。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.CharState">
+            <summary>
+            <see langword="[状态]"/> 对于数据库定长字符串的推荐状态。
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.ArabicNumerals">
+            <summary>
+            只搜索半角阿拉伯数字
+            <para>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.ArabicNumeralsFullWidth">
+            <summary>
+            只搜索全角阿拉伯数字
+            <para>０, １, ２, ３, ４, ５, ６, ７, ８, ９</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit01632">
+            <summary>
+            由 0x0660 (01632) 开始的十个数字。 
+            <para>٠, ١, ٢, ٣, ٤, ٥, ٦, ٧, ٨, ٩</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit01776">
+            <summary>
+            由 0x06f0 (01776) 开始的十个数字。 
+            <para>۰, ۱, ۲, ۳, ۴, ۵, ۶, ۷, ۸, ۹</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit01984">
+            <summary>
+            由 0x07c0 (01984) 开始的十个数字。 
+            <para>߀, ߁, ߂, ߃, ߄, ߅, ߆, ߇, ߈, ߉</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit02406">
+            <summary>
+            由 0x0966 (02406) 开始的十个数字。 
+            <para>०, १, २, ३, ४, ५, ६, ७, ८, ९</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit02534">
+            <summary>
+            由 0x09e6 (02534) 开始的十个数字。 
+            <para>০, ১, ২, ৩, ৪, ৫, ৬, ৭, ৮, ৯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit02662">
+            <summary>
+            由 0x0a66 (02662) 开始的十个数字。 
+            <para>੦, ੧, ੨, ੩, ੪, ੫, ੬, ੭, ੮, ੯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit02790">
+            <summary>
+            由 0x0ae6 (02790) 开始的十个数字。 
+            <para>૦, ૧, ૨, ૩, ૪, ૫, ૬, ૭, ૮, ૯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit02918">
+            <summary>
+            由 0x0b66 (02918) 开始的十个数字。 
+            <para>୦, ୧, ୨, ୩, ୪, ୫, ୬, ୭, ୮, ୯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03046">
+            <summary>
+            由 0x0be6 (03046) 开始的十个数字。 
+            <para>௦, ௧, ௨, ௩, ௪, ௫, ௬, ௭, ௮, ௯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03174">
+            <summary>
+            由 0x0c66 (03174) 开始的十个数字。 
+            <para>౦, ౧, ౨, ౩, ౪, ౫, ౬, ౭, ౮, ౯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03302">
+            <summary>
+            由 0x0ce6 (03302) 开始的十个数字。 
+            <para>೦, ೧, ೨, ೩, ೪, ೫, ೬, ೭, ೮, ೯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03430">
+            <summary>
+            由 0x0d66 (03430) 开始的十个数字。 
+            <para>൦, ൧, ൨, ൩, ൪, ൫, ൬, ൭, ൮, ൯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03558">
+            <summary>
+            由 0x0de6 (03558) 开始的十个数字。 
+            <para>෦, ෧, ෨, ෩, ෪, ෫, ෬, ෭, ෮, ෯</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03664">
+            <summary>
+            由 0x0e50 (03664) 开始的十个数字。 
+            <para>๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03665">
+            <summary>
+            由 0x0e51 (03665) 开始的十个数字。 
+            <para>๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙, ๚</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03792">
+            <summary>
+            由 0x0ed0 (03792) 开始的十个数字。 
+            <para>໐, ໑, ໒, ໓, ໔, ໕, ໖, ໗, ໘, ໙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit03872">
+            <summary>
+            由 0x0f20 (03872) 开始的十个数字。 
+            <para>༠, ༡, ༢, ༣, ༤, ༥, ༦, ༧, ༨, ༩</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit04160">
+            <summary>
+            由 0x1040 (04160) 开始的十个数字。 
+            <para>၀, ၁, ၂, ၃, ၄, ၅, ၆, ၇, ၈, ၉</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit04240">
+            <summary>
+            由 0x1090 (04240) 开始的十个数字。 
+            <para>႐, ႑, ႒, ႓, ႔, ႕, ႖, ႗, ႘, ႙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06112">
+            <summary>
+            由 0x17e0 (06112) 开始的十个数字。 
+            <para>០, ១, ២, ៣, ៤, ៥, ៦, ៧, ៨, ៩</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06160">
+            <summary>
+            由 0x1810 (06160) 开始的十个数字。 
+            <para>᠐, ᠑, ᠒, ᠓, ᠔, ᠕, ᠖, ᠗, ᠘, ᠙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06470">
+            <summary>
+            由 0x1946 (06470) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06608">
+            <summary>
+            由 0x19d0 (06608) 开始的十个数字。 
+            <para>᧐, ᧑, ᧒, ᧓, ᧔, ᧕, ᧖, ᧗, ᧘, ᧙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06784">
+            <summary>
+            由 0x1a80 (06784) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06800">
+            <summary>
+            由 0x1a90 (06800) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit06992">
+            <summary>
+            由 0x1b50 (06992) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit07088">
+            <summary>
+            由 0x1bb0 (07088) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit07232">
+            <summary>
+            由 0x1c40 (07232) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit07248">
+            <summary>
+            由 0x1c50 (07248) 开始的十个数字。 
+            <para>᱐, ᱑, ᱒, ᱓, ᱔, ᱕, ᱖, ᱗, ᱘, ᱙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit42528">
+            <summary>
+            由 0xa620 (42528) 开始的十个数字。 
+            <para>꘠, ꘡, ꘢, ꘣, ꘤, ꘥, ꘦, ꘧, ꘨, ꘩</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit43216">
+            <summary>
+            由 0xa8d0 (43216) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit43264">
+            <summary>
+            由 0xa900 (43264) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit43472">
+            <summary>
+            由 0xa9d0 (43472) 开始的十个数字。 
+            <para>꧐, ꧑, ꧒, ꧓, ꧔, ꧕, ꧖, ꧗, ꧘, ꧙</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit43504">
+            <summary>
+            由 0xa9f0 (43504) 开始的十个数字。 
+            <para>꧰, ꧱, ꧲, ꧳, ꧴, ꧵, ꧶, ꧷, ꧸, ꧹</para>
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit43600">
+            <summary>
+            由 0xaa50 (43600) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="F:Himesyo.DigitType.Digit44016">
+            <summary>
+            由 0xabf0 (44016) 开始的十个数字。 
+            </summary>
+        </member>
+        <member name="T:Himesyo.FreezerManger">
+            <summary>
+            冻结器管理
+            </summary>
+        </member>
+        <member name="M:Himesyo.FreezerManger.#ctor">
+            <summary>
+            初始化默认冻结器的值为 0 的具有默认最大值的 <see cref="T:Himesyo.FreezerManger"/> 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.FreezerManger.#ctor(System.Int32,System.Int32)">
+            <summary>
+            初始化自定义的默认冻结器的初始值的 <see cref="T:Himesyo.FreezerManger"/> 。
+            </summary>
+            <param name="defaultValue"></param>
+            <param name="defaultMaxValue"></param>
+        </member>
+        <member name="P:Himesyo.FreezerManger.Item(System.String)">
+            <summary>
+            获取或设置指定名称的冻结器。如果指定的名称不存在，则创建默认的冻结器。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Freezer">
+            <summary>
+            冻结器。它是一个计数器，当值大于 0 时，表示冻结状态。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.#ctor">
+            <summary>
+            初始化具有足够最大值（2100000000）的冻结器。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.#ctor(System.Int32)">
+            <summary>
+            初始化具有指定最大值的冻结器。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.#ctor(System.Int32,System.Int32)">
+            <summary>
+            初始化具有指定初始值和最大值的冻结器。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.Frozen">
+            <summary>
+            冻结。其值不会超过最大值。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.Unfreeze">
+            <summary>
+            解冻。其值不会低于 0 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.Recovery">
+            <summary>
+            完全恢复。将值置为 0 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Freezer.ToString">
+            <summary>
+            获取表示当前状态的字符串。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Freezer.op_Implicit(Himesyo.Freezer)~System.Boolean">
+            <summary>
+            获取是否在冻结状态。
+            </summary>
+            <param name="freezer"></param>
+        </member>
+        <member name="M:Himesyo.Freezer.op_Implicit(System.Boolean)~Himesyo.Freezer">
+            <summary>
+            创建最大值为 1 的冻结器并指定初始值。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.Freezer.op_Implicit(Himesyo.Freezer)~System.Int32">
+            <summary>
+            获取冻结器的当前值。
+            </summary>
+            <param name="freezer"></param>
+        </member>
+        <member name="M:Himesyo.Freezer.op_Implicit(System.Int32)~Himesyo.Freezer">
+            <summary>
+            创建最大值为默认值的冻结器并指定初始值。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="T:Himesyo.Recovery">
+            <summary>
+            设置一个在释放此对象时执行的动作。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Recovery.#ctor(System.Action)">
+            <summary>
+            在此对象释放时调用的动作。
+            </summary>
+            <param name="recoveryAction"></param>
+        </member>
+        <member name="M:Himesyo.Recovery.#ctor(Himesyo.Freezer)">
+            <summary>
+            冻结冻结器，在此对象释放时再解冻冻结器。
+            </summary>
+            <param name="freezer"></param>
+        </member>
+        <member name="M:Himesyo.Recovery.#ctor(Himesyo.Freezer,System.Boolean)">
+            <summary>
+            在此对象释放时解冻或恢复冻结器。
+            </summary>
+            <param name="freezer"></param>
+            <param name="isRecovery"></param>
+        </member>
+        <member name="M:Himesyo.Recovery.Dispose">
+            <summary>
+            立即解冻或执行动作。
+            </summary>
+        </member>
+        <member name="T:Himesyo.IO.AppConfig">
+            <summary>
+            表示应用程序设置。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Load``1(System.String,System.Type[])">
+            <summary>
+            使用默认的 XML 序列化器加载指定文件。如果文件不存在，则返回 <see langword="default"/> 。
+            </summary>
+            <typeparam name="T">要反序列化的类型</typeparam>
+            <param name="path">文件路径</param>
+            <param name="extraTypes">数组类型集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Load``1(System.String,System.Runtime.Serialization.IFormatter)">
+            <summary>
+            使用指定的格式化器反序列化指定的文件。如果文件不存在，则返回 <see langword="default"/> 。
+            </summary>
+            <typeparam name="T">要反序列化的类型</typeparam>
+            <param name="path">文件路径</param>
+            <param name="formatter">格式化器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Save``1(``0,System.String,System.Type[])">
+            <summary>
+            使用默认的 XML 序列化器保存到指定文件。覆盖已有文件。
+            </summary>
+            <typeparam name="T">要反序列化的类型</typeparam>
+            <param name="obj">要保存的文件</param>
+            <param name="path">文件路径</param>
+            <param name="extraTypes">数组类型集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Save``1(``0,System.String,System.Runtime.Serialization.IFormatter)">
+            <summary>
+            使用指定的格式化器序列化保存到指定文件。覆盖已有文件。
+            </summary>
+            <typeparam name="T">要反序列化的类型</typeparam>
+            <param name="obj">要保存的文件</param>
+            <param name="path">文件路径</param>
+            <param name="formatter">格式化器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Save(System.Object,System.String,System.Type[])">
+            <summary>
+            使用默认的 XML 序列化器保存到指定文件。覆盖已有文件。
+            </summary>
+            <param name="obj">要保存的文件</param>
+            <param name="path">文件路径</param>
+            <param name="extraTypes">数组类型集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Save(System.Object,System.String,System.Runtime.Serialization.IFormatter)">
+            <summary>
+            使用指定的格式化器序列化保存到指定文件。覆盖已有文件。
+            </summary>
+            <param name="obj">要保存的文件</param>
+            <param name="path">文件路径</param>
+            <param name="formatter">格式化器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.AppConfig.Save(System.String)">
+            <summary>
+            将当前配置保存到指定文件。默认为 XML 序列化。
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="T:Himesyo.IO.FileHelper">
+            <summary>
+            和文件相关的辅助方法。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.FileHelper.ShowInExplorer(System.String)">
+            <summary>
+            在系统资源管理器中显示。
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Himesyo.IO.FileHelper.Open(System.String)">
+            <summary>
+            打开文件或目录。
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Himesyo.IO.FileHelper.GetDirectoryStructure(System.String)">
+            <summary>
+            获取指定目录下所有文件夹和文件的目录结构。
+            </summary>
+            <param name="root"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.IO.Files">
+            <summary>
+            提供枚举文件的方法。
+            </summary>
+        </member>
+        <member name="E:Himesyo.IO.Files.ErrorHandler">
+            <summary>
+            发生错误后调用的委托。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IO.Files.RootPath">
+            <summary>
+            要枚举文件的路径，支持通配符。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IO.Files.SearchPattern">
+            <summary>
+            要与 <see cref="P:Himesyo.IO.Files.RootPath"/> 中的文件名称匹配的搜索字符串。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IO.Files.SearchOption">
+            <summary>
+            指定是搜索当前目录，还是搜索当前目录及其所有子目录。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.Files.#ctor">
+            <summary>
+            使用默认参数创建 <see cref="T:Himesyo.IO.Files"/> 类型的新实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.Files.#ctor(System.String)">
+            <summary>
+            使用指定路径创建 <see cref="T:Himesyo.IO.Files"/> 类型的新实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.Files.#ctor(System.String,System.String,System.IO.SearchOption,Himesyo.IO.EnumerateErrorEventHandler)">
+            <summary>
+            使用指定参数创建 <see cref="T:Himesyo.IO.Files"/> 类型的新实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.Files.EnumerateFiles">
+            <summary>
+            开始枚举文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.Files.EnumerateDirectories">
+            <summary>
+            开始枚举目录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.IO.EnumerateErrorEventHandler">
+            <summary>
+            为 <see cref="E:Himesyo.IO.Files.ErrorHandler"/> 事件提供委托类型。
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:Himesyo.IO.EnumerateErrorEventArgs">
+            <summary>
+            为 <see cref="E:Himesyo.IO.Files.ErrorHandler"/> 事件委托类型 <see cref="T:Himesyo.IO.EnumerateErrorEventHandler"/> 提供事件数据。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IO.EnumerateErrorEventArgs.Path">
+            <summary>
+            引发异常的路径。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IO.EnumerateErrorEventArgs.Exception">
+            <summary>
+            异常对象。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.EnumerateErrorEventArgs.#ctor(System.String,System.Exception)">
+            <summary>
+            使用指定路径信息和异常对象初始化 <see cref="T:Himesyo.IO.EnumerateErrorEventArgs"/> 类型的新实例。
+            </summary>
+            <param name="path"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="T:Himesyo.IO.PathConvert">
+            <summary>
+            提供对路径字符串相关的一些操作。是对 <see cref="T:System.IO.Path"/> 的一个扩展。
+            </summary>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetSafeFileName(System.String)">
+            <summary>
+            通过替换文件名中不可出现的字符来创建安全文件名称。
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetFullPath(System.String)">
+            <summary>
+            返回指定路径字符串的绝对路径。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <param name="path"></param>
+            <returns>指定路径字符串的绝对路径</returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetRelativePathFullPath(System.String,System.String)">
+            <summary>
+            获取指定路径字符串相对于另一路径的绝对路径。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <param name="path">指定路径</param>
+            <param name="sourcePath">另一绝对路径</param>
+            <returns>指定路径字符串相对于另一路径的绝对路径</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/> 或 <paramref name="sourcePath"/> 为 <see langword="null"/> .</exception>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetRelativePath(System.String,System.String)">
+            <summary>
+            返回指定路径字符串相对于另一目录路径的相对路径。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <param name="path">指定路径</param>
+            <param name="sourcePath">另一目录路径</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="path"/> 或 <paramref name="sourcePath"/> 为 <see langword="null"/> .</exception>
+            <exception cref="T:System.ArgumentException">两个路径不在同一盘符下。</exception>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetDirectoryName(System.String)">
+            <summary>
+            返回指定路径字符串的目录信息。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetFileName(System.String)">
+            <summary>
+            返回指定路径字符串的文件名和扩展名。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <param name="path">路径字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetFileNameWithoutExtension(System.String)">
+            <summary>
+            返回不具有扩展名的指定路径字符串的文件名。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <param name="path"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetExtension(System.String)">
+            <summary>
+            返回指定的路径字符串的扩展名。
+            <para>注意：该方法是对字符串的处理，未对输入路径进行验证。</para>
+            </summary>
+            <param name="path">路径字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetFullPathNotValidated(System.String,System.String)">
+            <summary>
+            获取绝对路径的实现。
+            </summary>
+            <param name="path"></param>
+            <param name="sourcePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.IO.PathConvert.GetRelativePathNotValidated(System.String,System.String)">
+            <summary>
+            获取相对路径的实现。两个路径都是绝对路径。
+            </summary>
+            <param name="path"></param>
+            <param name="sourcePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Linq.Enumerable">
+            <summary>
+            为 <see cref="T:System.Collections.Generic.IEnumerable`1"/> 提供扩展。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Linq.Enumerable.NullToEmpty``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            如果输入为 <see langword="null"/> 则返回空集合。
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Linq.Enumerable.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            对序列中的每个元素执行动作。
+            </summary>
+            <typeparam name="TSource"><paramref name="source"/> 中的元素的类型。</typeparam>
+            <param name="source">一个值序列，要对该序列执行动作。</param>
+            <param name="action">应用于每个元素的动作。</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="source"/> 或 <paramref name="action"/> 为 <see langword="null"/> .</exception>
+        </member>
+        <member name="M:Himesyo.Linq.Enumerable.ForEachReturn``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+            <summary>
+            对序列中的每个元素执行动作并返回。
+            </summary>
+            <typeparam name="TSource"><paramref name="source"/> 中的元素的类型。</typeparam>
+            <param name="source">一个值序列，要对该序列执行动作。</param>
+            <param name="action">应用于每个元素的动作。</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="source"/> 或 <paramref name="action"/> 为 <see langword="null"/> .</exception>
+        </member>
+        <member name="M:Himesyo.Linq.Enumerable.UpList``1(System.Collections.Generic.IEnumerable{``0})">
+            <summary>
+            提升类型到 <see cref="T:System.Collections.Generic.IList`1"/> 。
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:Himesyo.Linq.EmptyEnumerable`1">
+            <summary>
+            空数组。
+            </summary>
+            <typeparam name="TElement"></typeparam>
+        </member>
+        <member name="F:Himesyo.Linq.EmptyEnumerable`1.Instance">
+            <summary>
+            实例。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Linq.IdentityFunction`1">
+            <summary>
+            默认选择器。
+            </summary>
+            <typeparam name="TElement"></typeparam>
+        </member>
+        <member name="P:Himesyo.Linq.IdentityFunction`1.Instance">
+            <summary>
+            实例。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Property`1">
+            <summary>
+            对指定动态值的封装，可便捷使用指定值。
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="P:Himesyo.Property`1.Empty">
+            <summary>
+            不会引发异常的空属性。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Property`1.CanRead">
+            <summary>
+            获取此属性是否可读。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Property`1.CanWrite">
+            <summary>
+            获取此属性是否可写。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Property`1.Value">
+            <summary>
+            获取或设置属性的值。如果使用的索引器不存在，将引发 <see cref="T:System.NotSupportedException"/> 异常。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Property`1.#ctor(Himesyo.Getter{`0},Himesyo.Setter{`0})">
+            <summary>
+            使用指定索引器封装一个属性.
+            </summary>
+            <param name="getter"></param>
+            <param name="setter"></param>
+        </member>
+        <member name="T:Himesyo.MemberToProperty`1">
+            <summary>
+            将成员封装为属性。
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:Himesyo.MemberToProperty`1.#ctor(System.Reflection.MemberInfo)">
+            <summary>
+            从指定成员生成属性。
+            </summary>
+            <param name="member"></param>
+        </member>
+        <member name="M:Himesyo.MemberToProperty`1.#ctor(System.Reflection.MemberInfo,System.Reflection.MemberInfo)">
+            <summary>
+            从不同的成员生成属性。
+            </summary>
+            <param name="getterMember"></param>
+            <param name="setterMember"></param>
+        </member>
+        <member name="M:Himesyo.MemberToProperty`1.CreateGetter(System.Object)">
+            <summary>
+            对指定实例创建 <see cref="T:Himesyo.Getter`1"/> 。
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.MemberToProperty`1.CreateSetter(System.Object)">
+            <summary>
+            对指定实例创建 <see cref="T:Himesyo.Setter`1"/> 。
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.MemberToProperty`1.CreateProperty(System.Object)">
+            <summary>
+            对指定实例创建 <see cref="T:Himesyo.Property`1"/> 。
+            </summary>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Himesyo.Getter`1.Value">
+            <summary>
+            获取值。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Runtime.AttachData">
+            <summary>
+            将指定引用类型数据动态的附加到托管对象。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Runtime.CustomAttributeProvider">
+            <summary>
+            为 <see cref="T:System.Reflection.ICustomAttributeProvider"/> 提供扩展。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetUsage``1">
+            <summary>
+            获取特性类型的 <see cref="T:System.AttributeUsageAttribute"/> .
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetUsage(System.Type)">
+            <summary>
+            获取特性类型的 <see cref="T:System.AttributeUsageAttribute"/> .
+            </summary>
+            <param name="type">要获取 <see cref="T:System.AttributeUsageAttribute"/> 特性的特性类型。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetUsage(System.Attribute)">
+            <summary>
+            获取特性类型的 <see cref="T:System.AttributeUsageAttribute"/> .
+            </summary>
+            <param name="attribute">要获取 <see cref="T:System.AttributeUsageAttribute"/> 特性的特性。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetAttribute``1(System.Reflection.ICustomAttributeProvider)">
+            <summary>
+            获取单个特性。
+            </summary>
+            <typeparam name="TAttribute"></typeparam>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetDisplayName(System.Reflection.ICustomAttributeProvider)">
+            <summary>
+            获取对象 <see cref="T:System.ComponentModel.DisplayNameAttribute"/> 特性的值。
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetCategory(System.Reflection.ICustomAttributeProvider)">
+            <summary>
+            获取对象 <see cref="T:System.ComponentModel.CategoryAttribute"/> 特性的值。
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetDescription(System.Reflection.ICustomAttributeProvider)">
+            <summary>
+            获取对象 <see cref="T:System.ComponentModel.DescriptionAttribute"/> 特性的值。
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.CustomAttributeProvider.GetGuid(System.Reflection.ICustomAttributeProvider)">
+            <summary>
+            获取对象 <see cref="T:System.Runtime.InteropServices.GuidAttribute"/> 特性的值。
+            </summary>
+            <param name="provider"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Runtime.Reflection">
+            <summary>
+            提供与反射有关的方法和扩展。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetConstructor(System.Type)">
+            <summary>
+            获取公共无参数构造函数。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.IsOverrideToString(System.Type)">
+            <summary>
+            此类型是否重写了 <see cref="M:System.Object.ToString"/> 方法。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetDescriptions(System.Type,Himesyo.Runtime.MemberDefinitionType,System.Type)">
+            <summary>
+            通过预定义类型获取成员列表。部分预定义类型可能具有自动修正效果。
+            </summary>
+            <param name="type"></param>
+            <param name="memberDefinitionType"></param>
+            <param name="valueType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetDisplayNames(System.Type,Himesyo.Runtime.MemberDefinitionType,System.Type)">
+            <summary>
+            通过预定义类型获取成员列表。部分预定义类型可能具有自动修正效果。
+            </summary>
+            <param name="type"></param>
+            <param name="memberDefinitionType"></param>
+            <param name="valueType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetDescriptionsOfFields(System.Type,System.Type,System.Reflection.BindingFlags,System.Object)">
+            <summary>
+            获取类型字段及其 <see cref="T:System.ComponentModel.DescriptionAttribute"/> 特性的信息。
+            </summary>
+            <param name="type"></param>
+            <param name="valueType">值的类型，如果为 null 表示获取所有类型。</param>
+            <param name="flags"></param>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetDisplayNamesOfFields(System.Type,System.Type,System.Reflection.BindingFlags,System.Object)">
+            <summary>
+            获取类型字段及其 <see cref="T:System.ComponentModel.DisplayNameAttribute"/> 特性的信息。
+            </summary>
+            <param name="type"></param>
+            <param name="valueType">值的类型，如果为 null 表示获取所有类型。</param>
+            <param name="flags"></param>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetDescriptionsOfProperties(System.Type,System.Type,System.Reflection.BindingFlags,System.Object)">
+            <summary>
+            获取类型属性及其 <see cref="T:System.ComponentModel.DescriptionAttribute"/> 特性的信息。
+            </summary>
+            <param name="type"></param>
+            <param name="valueType">值的类型，如果为 null 表示获取所有类型。</param>
+            <param name="flags"></param>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.GetDisplayNamesOfProperties(System.Type,System.Type,System.Reflection.BindingFlags,System.Object)">
+            <summary>
+            获取类型属性及其 <see cref="T:System.ComponentModel.DisplayNameAttribute"/> 特性的信息。
+            </summary>
+            <param name="type"></param>
+            <param name="valueType">值的类型，如果为 null 表示获取所有类型。</param>
+            <param name="flags"></param>
+            <param name="instance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Reflection.CreateMethod(System.Type,System.Type[],System.String,System.Type[],System.Type[])">
+            <summary>
+            创建对指定泛型类型或泛型方法的引用。
+            </summary>
+            <param name="baseType"></param>
+            <param name="typeGenericTypes"></param>
+            <param name="methodName"></param>
+            <param name="methodGenericTypes"></param>
+            <param name="methodArgumentTypes"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Runtime.MemberDefinitionType">
+            <summary>
+            预定义的成员类型。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.MemberDefinitionType.Enum">
+            <summary>
+            枚举类型值。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.MemberDefinitionType.Constant">
+            <summary>
+            常量值。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.MemberDefinitionType.StaticProperty">
+            <summary>
+            静态属性值。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Runtime.Extend.RuntimeExtend">
+            <summary>
+            扩展类
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.Extend.RuntimeExtend.Show(System.Reflection.MethodBase,System.Boolean,System.String)">
+            <summary>
+            显示方法全名
+            </summary>
+            <param name="method"></param>
+            <param name="includeParameters">是否包含参数信息</param>
+            <param name="prefix">输出前缀</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Extend.RuntimeExtend.Show(System.Type)">
+            <summary>
+            显示类型名称。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.Extend.RuntimeExtend.IsSystem(System.Reflection.MethodBase)">
+            <summary>
+            是否是系统方法。
+            </summary>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Runtime.ShouldIgnoreException">
+            <summary>
+            表示一个应该被忽略的异常。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Runtime.ShouldIgnoreException.CreateShow">
+            <summary>
+            表示此对象在创建时是否应输出信息。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Runtime.ShouldIgnoreException.OutputStream">
+            <summary>
+            获取或设置标准输出流。它默认为控制台输出。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Runtime.ShouldIgnoreException.Identity">
+            <summary>
+            标识符。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Runtime.ShouldIgnoreException.Log">
+            <summary>
+            打印日志类型。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Runtime.ShouldIgnoreException.ShowInfo">
+            <summary>
+            获取构造时的信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor">
+            <summary>
+            表示一个应该被忽略的异常。创建时输出所有信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.String)">
+            <summary>
+            表示一个应该被忽略的异常。创建时输出所有信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.String,System.Exception)">
+            <summary>
+            表示一个应该被忽略的异常。创建时输出所有信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.Int32,Himesyo.Runtime.ShouldIgnoreLog)">
+            <summary>
+            表示一个应该被忽略的异常。可以指定标识号 identity 和创建时输出的信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.String,System.Int32)">
+            <summary>
+            表示一个应该被忽略的异常。可以指定标识号 identity 并在创建时输出所有信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.String,System.Int32,Himesyo.Runtime.ShouldIgnoreLog)">
+            <summary>
+            表示一个应该被忽略的异常。可以指定标识号 identity 和创建时输出的信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.String,System.Exception,System.Int32,Himesyo.Runtime.ShouldIgnoreLog)">
+            <summary>
+            表示一个应该被忽略的异常。可以指定标识号 identity 和创建时输出的信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            序列化构造函数。
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Himesyo.Runtime.ShouldIgnoreException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            使用将目标对象序列化所需的数据填充 <see cref="T:System.Runtime.Serialization.SerializationInfo"/> 。
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:Himesyo.Runtime.ShouldIgnoreLog">
+            <summary>
+            显示的日志类型。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.None">
+            <summary>
+            无指定内容。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.Identity">
+            <summary>
+            输出标志号。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.Message">
+            <summary>
+            输出消息文本。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.Method">
+            <summary>
+            输出调用方法。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.InnerException">
+            <summary>
+            输出 <see cref="P:System.Exception.InnerException"/> 。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.FullInnerException">
+            <summary>
+            输出所有 <see cref="P:System.Exception.InnerException"/> 。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.StackTrace">
+            <summary>
+            输出调用堆栈信息。
+            </summary>
+        </member>
+        <member name="F:Himesyo.Runtime.ShouldIgnoreLog.All">
+            <summary>
+            输出全部信息。
+            </summary>
+        </member>
+        <member name="T:Himesyo.Runtime.StackTraceHelper">
+            <summary>
+            辅助获取堆栈信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Runtime.StackTraceHelper.GetLastCallFrame(System.Type,System.Collections.Generic.IEnumerable{System.Diagnostics.StackFrame})">
+            <summary>
+            获取最后调用指定类型的堆栈函数调用。
+            </summary>
+            <param name="type"></param>
+            <param name="stackFrames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.StackTraceHelper.GetFramesAfterType(System.Type)">
+            <summary>
+            获取调用指定类型之前的所有堆栈信息。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Runtime.StackTraceHelper.ToTraceString(System.Diagnostics.StackFrame)">
+            <summary>
+            将单个函数调用转换成字符串表现形式。
+            </summary>
+            <param name="frame"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.ShowItem`1">
+            <summary>
+            表示一个自定义显示的项。它与 <see cref="P:Himesyo.ShowItem`1.Value"/> 的值相同。
+            <para>警告：此类型不建议作为字典的键，因为它的比较方法已重写并且其哈希代码可变。</para>
+            </summary>
+            <typeparam name="TValue"></typeparam>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.CreateShowItem(System.Type)">
+            <summary>
+            创建指定类型的 <see cref="T:Himesyo.ShowItem`1"/> 。
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.Show">
+            <summary>
+            要显示的对象。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.Value">
+            <summary>
+            实际的值。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.FormatString">
+            <summary>
+            格式化字符串。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.FormatProvider">
+            <summary>
+            格式化器提供程序（包括区域性信息）。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.Custom">
+            <summary>
+            获取或设置自定义获取字符串的函数。它拥有最高的优先级（仅针对 <see cref="M:Himesyo.ShowItem`1.ToString"/>）。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.ShowLength">
+            <summary>
+            补齐字符串长度。正值右对齐，负值左对齐。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ShowItem`1.Tag">
+            <summary>
+            获取或设置用户关联的对象数据。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.#ctor">
+            <summary>
+            初始化新实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.#ctor(`0)">
+            <summary>
+            以指定值初始化新实例。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.#ctor(`0,System.Object)">
+            <summary>
+            以指定值与显示对象初始化新实例。
+            </summary>
+            <param name="value"></param>
+            <param name="show"></param>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.ToString">
+            <summary>
+            获取字符串显示。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.Equals(System.Object)">
+            <summary>
+            指定对象是否与当前对象相等。
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.GetHashCode">
+            <summary>
+            获取哈希代码。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.op_Equality(Himesyo.ShowItem{`0},Himesyo.ShowItem{`0})">
+            <summary>
+            相等比较。
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.op_Inequality(Himesyo.ShowItem{`0},Himesyo.ShowItem{`0})">
+            <summary>
+            不等比较。
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.op_Implicit(`0)~Himesyo.ShowItem{`0}">
+            <summary>
+            从 <typeparamref name="TValue"/> 隐式转换。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.ShowItem`1.op_Explicit(Himesyo.ShowItem{`0})~`0">
+            <summary>
+            显示转换到 <typeparamref name="TValue"/> 。
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="T:Himesyo.IShowItem">
+            <summary>
+            表示一个显示项。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.ValueType">
+            <summary>
+            <see cref="P:Himesyo.IShowItem.Value"/> 的限制类型。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.Show">
+            <summary>
+            要显示的对象。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.Value">
+            <summary>
+            实际的值。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.FormatString">
+            <summary>
+            格式化字符串。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.FormatProvider">
+            <summary>
+            格式化器提供程序（包括区域性信息）。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.Custom">
+            <summary>
+            获取或设置自定义获取字符串的函数。它拥有最高的优先级（仅针对 <see cref="!:ToString()"/>）。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.ShowLength">
+            <summary>
+            补齐字符串长度。正值右对齐，负值左对齐。
+            </summary>
+        </member>
+        <member name="P:Himesyo.IShowItem.Tag">
+            <summary>
+            获取或设置用户关联的对象数据。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.Design.FileLengthFormatter.GetFormat(System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Himesyo.ComponentModel.Design.FileLengthFormatter.Format(System.String,System.Object,System.IFormatProvider)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Himesyo.ComponentModel.ShowObject">
+            <summary>
+            表示对一个对象的封装用于自定义属性说明符。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.ShowObject.#ctor(System.Object)">
+            <summary>
+            要封装的对象。
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:Himesyo.ComponentModel.ShowObject.ShowHide">
+            <summary>
+            是否显示隐藏的属性。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.ShowObject.ShowItems">
+            <summary>
+            设定要显示的属性和属性的信息。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.ShowObject.GetProperties(System.Attribute[])">
+            <summary>
+            获取包含指定特性的属性说明符集合。
+            </summary>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ComponentModel.ShowObject.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            返回包含指定的属性描述符所描述的属性的对象。
+            </summary>
+            <param name="pd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.ComponentModel.ShowObj`1">
+            <summary>
+            表示一个可在 <see cref="T:System.Windows.Forms.PropertyGrid"/> 显示的对象。它所显示的属性，由一个 <typeparamref name="T"/> 类型的集合决定。
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:Himesyo.ComponentModel.ShowObj`1.Collection">
+            <summary>
+            显示的属性集合。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.ShowObj`1.#ctor">
+            <summary>
+            初始化空集合实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.ShowObj`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            使用指定集合初始化新实例。
+            </summary>
+            <param name="objs"></param>
+        </member>
+        <member name="T:Himesyo.ComponentModel.IShowProperty">
+            <summary>
+            表示一个可显示的属性。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.IShowProperty.Name">
+            <summary>
+            显示的名称
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.IShowProperty.PropertyType">
+            <summary>
+            属性类型
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.IShowProperty.Attributes">
+            <summary>
+            特性集合
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.IShowProperty.GetValue">
+            <summary>
+            获取值。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.ComponentModel.IShowProperty.SetValue(System.Object)">
+            <summary>
+            设置值。
+            </summary>
+            <param name="newValue"></param>
+        </member>
+        <member name="T:Himesyo.ComponentModel.ShowPropertyDescriptor">
+            <summary>
+            为 <see cref="T:Himesyo.ComponentModel.IShowProperty"/> 所指示的属性提供属性说明。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.ShowPropertyDescriptor.#ctor(Himesyo.ComponentModel.IShowProperty)">
+            <summary>
+            为 <see cref="T:Himesyo.ComponentModel.IShowProperty"/> 所指示的属性提供属性说明。
+            </summary>
+        </member>
+        <member name="T:Himesyo.ComponentModel.StandardValuesAttribute">
+            <summary>
+            为指定属性设置值列表。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.StandardValuesAttribute.StandardValuesExclusive">
+            <summary>
+            独占下拉列表（只能下拉选择不能自己输入）
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.StandardValuesAttribute.Keys">
+            <summary>
+            显示的值列表。实际列表数量为两个数组长度的最小值。
+            </summary>
+        </member>
+        <member name="P:Himesyo.ComponentModel.StandardValuesAttribute.Values">
+            <summary>
+            实际的值列表。实际列表数量为两个数组长度的最小值。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.StandardValuesAttribute.#ctor">
+            <summary>
+            列表为空或自己设置值列表。
+            </summary>
+        </member>
+        <member name="M:Himesyo.ComponentModel.StandardValuesAttribute.#ctor(System.String[],System.Object[])">
+            <summary>
+            设置值列表。
+            </summary>
+            <param name="keys">显示的值。</param>
+            <param name="values">实际值。</param>
+        </member>
+        <member name="T:Himesyo.ComponentModel.StandardValuesConverter">
+            <summary>
+            为 <see cref="T:Himesyo.ComponentModel.StandardValuesAttribute"/> 特性提供转换器。
+            </summary>
+        </member>
+        <member name="T:Himesyo.HimesyoTest">
+            <summary>
+            测试类
+            </summary>
+        </member>
+        <member name="M:Himesyo.HimesyoTest.Main">
+            <summary>
+            测试主方法
+            </summary>
+        </member>
+        <member name="T:Himesyo.Logger.LoggerSimple">
+            <summary>
+            简单的日志记录器
+            </summary>
+        </member>
+        <member name="P:Himesyo.Logger.LoggerSimple.SyncRoot">
+            <summary>
+            获取可用于同步对 <see cref="T:Himesyo.Logger.LoggerSimple"/> 的访问的对象。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Logger.LoggerSimple.WriteLocator">
+            <summary>
+            是否写入定位符。用于阅读器分析日志数据。默认为 <see langword="false"/> 。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Logger.LoggerSimple.WriteDebugLevel">
+            <summary>
+            是否写入 <see cref="F:Himesyo.Logger.LogLevel.Debug"/> 等级的日志。默认为 <see langword="true"/> 。
+            </summary>
+        </member>
+        <member name="P:Himesyo.Logger.LoggerSimple.CanWrite">
+            <summary>
+            日志记录器是否可用(是否初始化成功。)
+            </summary>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.Init(System.String,System.String)">
+            <summary>
+            使用指定目录和程序名称初始化记录器。
+            </summary>
+            <param name="rootPath"></param>
+            <param name="logClass"></param>
+            <exception cref="T:System.IO.IOException">日志文件打开失败。</exception>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.Write(Himesyo.Logger.LogLevel,System.String)">
+            <summary>
+            写入消息。
+            </summary>
+            <param name="level"></param>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteDebug(System.String)">
+            <summary>
+            写入调试信息。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteInfo(System.String)">
+            <summary>
+            写入需要记录的消息。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteInfo(System.Object)">
+            <summary>
+            写入需要记录的消息。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteWarning(System.String)">
+            <summary>
+            写入需要记录的警告。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteWarning(System.Object)">
+            <summary>
+            写入需要记录的警告。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteError(System.String)">
+            <summary>
+            写入一个异常说明。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteError(System.String,System.Exception)">
+            <summary>
+            写入一个异常说明和异常的详细信息。
+            </summary>
+            <param name="info"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteError(System.Exception)">
+            <summary>
+            写入一个异常对象。
+            </summary>
+            <param name="ex"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.WriteFatal(System.String)">
+            <summary>
+            写入一个致命的信息。
+            </summary>
+            <param name="info"></param>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.Close">
+            <summary>
+            关闭已打开的文件。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.GetMethodName">
+            <summary>
+            获取调用日志的方法名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.Create">
+            <summary>
+            创建新日志文件。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.Check">
+            <summary>
+            判断文件是否已超过指定大小。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Logger.LoggerSimple.GetFilePath(System.DateTime)">
+            <summary>
+            从时间创建文件路径。
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Win32.Resources">
+            <summary>
+            提供与资源有关的 Win32 API。
+            </summary>
+        </member>
+        <member name="M:Himesyo.Win32.Resources.ExtractIcon(System.String,System.Int32)">
+            <summary>
+            从动态链接库中导出图标。
+            </summary>
+            <param name="fileName"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Win32.Windows">
+            <summary>
+            提供与窗体有关的 Win32 API
+            </summary>
+        </member>
+        <member name="M:Himesyo.Win32.Windows.FindWindow(System.String,System.String)">
+            <summary>
+            查找指定窗体的句柄。
+            </summary>
+            <param name="lpClassName">窗体类名。可为 null 。</param>
+            <param name="lpWindowName">窗体标题</param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Win32.Windows.ShowWindow(System.IntPtr,Himesyo.Win32.ShowWindowType)">
+            <summary>
+            显示窗体
+            </summary>
+        </member>
+        <member name="M:Himesyo.Win32.Windows.SendMessage(System.IntPtr,System.Int32,System.IntPtr,System.String)">
+            <summary>
+            对指定句柄发送消息。
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Win32.Windows.SendMessage(System.IntPtr,System.Int32,System.IntPtr,System.Text.StringBuilder)">
+            <summary>
+            对指定句柄发送消息。
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Win32.Windows.SendMessage(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr@)">
+            <summary>
+            对指定句柄发送消息。
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.Win32.Windows.PostMessage(System.Runtime.InteropServices.HandleRef,System.UInt32,System.IntPtr,System.IntPtr)">
+            <summary>
+            对指定句柄发送消息。异步。
+            </summary>
+            <param name="hWnd"></param>
+            <param name="msg"></param>
+            <param name="wParam"></param>
+            <param name="lParam"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.Win32.ShowWindowType">
+            <summary>
+            显示窗体类型
+            </summary>
+        </member>
+        <member name="F:Himesyo.Win32.ShowWindowType.Hide">
+            <summary>
+            隐藏
+            </summary>
+        </member>
+        <member name="F:Himesyo.Win32.ShowWindowType.Normal">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="F:Himesyo.Win32.ShowWindowType.Min">
+            <summary>
+            最小化
+            </summary>
+        </member>
+        <member name="F:Himesyo.Win32.ShowWindowType.Max">
+            <summary>
+            最大化
+            </summary>
+        </member>
+        <member name="M:Himesyo.Win32.WindowsApi.ShowWindowAsync(System.IntPtr,System.Int32)">
+            <summary>
+            windowapi 通过句柄显示或隐藏窗体函数
+            </summary>
+            <param name="hWnd">窗体句柄</param>
+            <param name="cmdShow">显示类型（0：隐藏窗体，1：默认大小窗体，2：最小化窗体，3：最大化窗体）</param>
+            <returns>返回成功或失败</returns>
+        </member>
+        <member name="T:Himesyo.WinForm.DatabaseConnectionBox">
+            <summary>
+            提供对数据库的连接。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.#ctor">
+            <summary>
+            提供对数据库的连接。
+            </summary>
+        </member>
+        <member name="E:Himesyo.WinForm.DatabaseConnectionBox.Opened">
+            <summary>
+            连接成功后引发的事件。
+            </summary>
+        </member>
+        <member name="E:Himesyo.WinForm.DatabaseConnectionBox.ConnectionItems">
+            <summary>
+            获取现有连接列表的事件。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.DatabaseConnectionBox.Result">
+            <summary>
+            成功连接的结果对象。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.DatabaseConnectionBox.SelectedItem">
+            <summary>
+            获取或设置当前选中的连接字符串拼接对象。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.RefreshConnectionType">
+            <summary>
+            刷新数据库连接的类型。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.ShowConnection(System.Data.Common.DbConnection)">
+            <summary>
+            显示指定数据库连接记录的连接字符串。
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.OnOpened(System.EventArgs)">
+            <summary>
+            引发 <see cref="E:Himesyo.WinForm.DatabaseConnectionBox.Opened"/> 事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.OnConnectionItems(Himesyo.WinForm.ConnectionItemsEventArgs)">
+            <summary>
+            引发 <see cref="E:Himesyo.WinForm.DatabaseConnectionBox.ConnectionItems"/> 事件。
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="F:Himesyo.WinForm.DatabaseConnectionBox.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionBox.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:Himesyo.WinForm.ConnectionItemsEventHandler">
+            <summary>
+            表示 <see cref="E:Himesyo.WinForm.DatabaseConnectionBox.ConnectionItems"/> 事件使用的委托。
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:Himesyo.WinForm.ConnectionItemsEventArgs">
+            <summary>
+            为 <see cref="E:Himesyo.WinForm.DatabaseConnectionBox.ConnectionItems"/> 事件参数提供类型。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ConnectionItemsEventArgs.Add(Himesyo.ShowItem{System.Data.Common.DbConnectionStringBuilder})">
+            <summary>
+            添加现有连接项。
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.ConnectionItemsEventArgs.GetItems">
+            <summary>
+            获取当前显示项集合。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.WinForm.ConnectionResult">
+            <summary>
+            连接结果类型。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ConnectionResult.ConnectionStringBuilder">
+            <summary>
+            连接字符串拼接对象。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ConnectionResult.Connection">
+            <summary>
+            数据库连接。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ConnectionResult.IsOpen">
+            <summary>
+            当前连接是否在打开状态。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ConnectionResult.OpenNewConnection">
+            <summary>
+            使用当前 <see cref="P:Himesyo.WinForm.ConnectionResult.ConnectionStringBuilder"/> 打开新连接。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.WinForm.ShowObject">
+            <summary>
+            表示对一个对象的封装用于自定义属性说明符。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ShowObject.ComponentObject">
+            <summary>
+            封装的对象。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ShowObject.#ctor(System.Object)">
+            <summary>
+            要封装的对象。
+            </summary>
+            <param name="obj"></param>
+        </member>
+        <member name="P:Himesyo.WinForm.ShowObject.ShowItems">
+            <summary>
+            设定要显示的属性和属性的信息。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ShowObject.ShowHide">
+            <summary>
+            是否显示隐藏的属性。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ShowObject.Sort">
+            <summary>
+            排序依据。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ShowObject.Add(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            添加要显示的属性和其显示信息。
+            </summary>
+            <param name="name"></param>
+            <param name="displayName"></param>
+            <param name="category"></param>
+            <param name="hide"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.ShowObject.AutoAddShowItems(Himesyo.WinForm.ShowPropertyInfo)">
+            <summary>
+            自动添加显示项。
+            </summary>
+            <param name="defaultInfo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.WinForm.ShowObject.GetProperties(System.Attribute[])">
+            <summary>
+            获取包含指定特性的属性说明符集合。
+            </summary>
+            <param name="attributes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Himesyo.WinForm.ShowObject.GetPropertyOwner(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            返回包含指定的属性描述符所描述的属性的对象。
+            </summary>
+            <param name="pd"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.WinForm.DatabaseConnectionDialog">
+            <summary>
+            表示一个提供连接数据库的对话框。
+            </summary>
+        </member>
+        <member name="E:Himesyo.WinForm.DatabaseConnectionDialog.ConnectionItems">
+            <summary>
+            获取现有连接列表的事件。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionDialog.#ctor">
+            <summary>
+            表示一个提供连接数据库的对话框。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.DatabaseConnectionDialog.Text">
+            <summary>
+            对话框的标题。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.DatabaseConnectionDialog.Result">
+            <summary>
+            成功连接的结果对象。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.DatabaseConnectionDialog.ConnectionStringBuilder">
+            <summary>
+            获取或设置连接字符串拼接对象。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionDialog.SetConnection(System.Data.Common.DbConnection)">
+            <summary>
+            显示指定数据库连接记录的连接字符串。
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionDialog.Reset">
+            <summary>
+            将通用对话框的属性重置为默认值。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.DatabaseConnectionDialog.RunDialog(System.IntPtr)">
+            <summary>
+            指定通用对话框。
+            </summary>
+            <param name="hwndOwner"></param>
+            <returns></returns>
+        </member>
+        <member name="E:Himesyo.WinForm.FormShowMessage.Cancelled">
+            <summary>
+            用户单击取消按钮引发的事件。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.ShowMessage(Himesyo.WinForm.ShowTaskMethod,System.ComponentModel.CancelEventHandler)">
+            <summary>
+            使用此对话框显示并执行指定委托。
+            </summary>
+            <param name="showTask"></param>
+            <param name="cancelled">用户单击取消按钮引发的事件</param>
+            <returns></returns>
+        </member>
+        <member name="P:Himesyo.WinForm.FormShowMessage.IsCancel">
+            <summary>
+            用户是否已经单击取消。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.SetFormTitle(System.String)">
+            <summary>
+            设置窗体的标题。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.SetTitle(System.String)">
+            <summary>
+            设置当前进度的标题。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.SetCaption(System.String)">
+            <summary>
+            设置当前进度的详细说明。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.SetProgress(System.Int32,System.Int32,System.Windows.Forms.ProgressBarStyle)">
+            <summary>
+            设置当前进度和样式。
+            </summary>
+            <param name="max"></param>
+            <param name="value"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.Complete">
+            <summary>
+            完成任务。等待用户单击 完成 按钮。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.Cancel">
+            <summary>
+            取消任务。关闭对话框并返回 <see cref="F:System.Windows.Forms.DialogResult.Cancel"/> 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.Close(System.Windows.Forms.DialogResult)">
+            <summary>
+            使用指定结果直接关闭对话框。
+            </summary>
+            <param name="result"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.ShowDialog(System.Windows.Forms.Form)">
+            <summary>
+            将指定窗体显示为模式对话框。
+            </summary>
+            <param name="form"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Himesyo.WinForm.FormShowMessage.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.FormShowMessage.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Himesyo.WinForm.ShowTaskMethod">
+            <summary>
+            使用显示窗体执行的委托。
+            </summary>
+            <param name="showText"></param>
+        </member>
+        <member name="T:Himesyo.WinForm.IShowText">
+            <summary>
+            表示一个可显示说明和进度的对话框。句柄用于显示模式对话框。
+            </summary>
+        </member>
+        <member name="E:Himesyo.WinForm.IShowText.Cancelled">
+            <summary>
+            用户单击取消引发的事件。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.IShowText.IsCancel">
+            <summary>
+            获取用户是否单击了取消按钮。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.SetFormTitle(System.String)">
+            <summary>
+            设置对话框的标题。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.SetTitle(System.String)">
+            <summary>
+            设置提示的主标题。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.SetCaption(System.String)">
+            <summary>
+            设置进度的说明或详细信息。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.SetProgress(System.Int32,System.Int32,System.Windows.Forms.ProgressBarStyle)">
+            <summary>
+            设置进度条的最大值，当前值和进度条样式。
+            </summary>
+            <param name="max"></param>
+            <param name="value"></param>
+            <param name="style"></param>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.Complete">
+            <summary>
+            任务完成，等待用户单击按钮关闭对话框。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.Cancel">
+            <summary>
+            任务取消，关闭对话框并返回 <see cref="F:System.Windows.Forms.DialogResult.Cancel"/> 。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.IShowText.Close(System.Windows.Forms.DialogResult)">
+            <summary>
+            关闭对话框。
+            </summary>
+        </member>
+        <member name="T:Himesyo.WinForm.ProgressWindow">
+            <summary>
+            可显示进度的模式对话框。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ProgressWindow.Show(Himesyo.WinForm.ShowTaskMethod,System.ComponentModel.CancelEventHandler)">
+            <summary>
+            使用此对话框显示并执行指定委托。
+            </summary>
+            <param name="showTask"></param>
+            <param name="cancelled">用户单击取消按钮引发的事件</param>
+            <returns></returns>
+        </member>
+        <member name="T:Himesyo.WinForm.ListLayoutPanel">
+            <summary>
+            处理其组件的布局并以纵向列表的形式自动排列它们。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ListLayoutPanel.#ctor">
+            <summary>
+            使用默认设置初始化 <see cref="T:Himesyo.WinForm.ListLayoutPanel"/> 的新实例。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ListLayoutPanel.LayoutEngine">
+            <inheritdoc/>
+        </member>
+        <member name="F:Himesyo.WinForm.ListLayoutPanel.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ListLayoutPanel.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Himesyo.WinForm.ListLayoutPanel.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="T:Himesyo.WinForm.ListLayoutEngine">
+            <summary>
+            纵向列表的排列引擎。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.ListLayoutEngine.Instance">
+            <summary>
+            <see cref="T:Himesyo.WinForm.ListLayoutEngine"/> 默认实例。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.ListLayoutEngine.Layout(System.Object,System.Windows.Forms.LayoutEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Himesyo.WinForm.Popup">
+            <summary>
+            Represents a pop-up window.
+            <para>https://github.com/AdamsLair/winforms.popupcontrol</para>
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.Content">
+            <summary>
+            Gets the content of the pop-up.
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.ShowingAnimation">
+            <summary>
+            Determines which animation to use while showing the pop-up window.
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.HidingAnimation">
+            <summary>
+            Determines which animation to use while hiding the pop-up window.
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.AnimationDuration">
+            <summary>
+            Determines the duration of the animation.
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.FocusOnOpen">
+            <summary>
+            Gets or sets a value indicating whether the content should receive the focus after the pop-up has been opened.
+            </summary>
+            <value><c>true</c> if the content should be focused after the pop-up has been opened; otherwise, <c>false</c>.</value>
+            <remarks>If the FocusOnOpen property is set to <c>false</c>, then pop-up cannot use the fade effect.</remarks>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.AcceptAlt">
+            <summary>
+            Gets or sets a value indicating whether pressing the alt key should close the pop-up.
+            </summary>
+            <value><c>true</c> if pressing the alt key does not close the pop-up; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.Resizable">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="!:PopupControl.Popup" /> is resizable.
+            </summary>
+            <value><c>true</c> if resizable; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.NonInteractive">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="!:PopupControl.Popup"></see> acts like a transparent windows (so it cannot be clicked).
+            </summary>
+            <value>
+            <c>true</c> if the popup is noninteractive; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.MinimumSize">
+            <summary>
+            Gets or sets a minimum size of the pop-up.
+            </summary>
+            <returns>An ordered pair of type <see cref="T:System.Drawing.Size" /> representing the width and height of a rectangle.</returns>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.MaximumSize">
+            <summary>
+            Gets or sets a maximum size of the pop-up.
+            </summary>
+            <returns>An ordered pair of type <see cref="T:System.Drawing.Size" /> representing the width and height of a rectangle.</returns>
+        </member>
+        <member name="P:Himesyo.WinForm.Popup.CreateParams">
+            <summary>
+            Gets parameters of a new window.
+            </summary>
+            <returns>An object of type <see cref="T:System.Windows.Forms.CreateParams" /> used when creating a new window.</returns>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.#ctor(System.Windows.Forms.Control)">
+            <summary>
+            Initializes a new instance of the <see cref="!:PopupControl.Popup"/> class.
+            </summary>
+            <param name="content">The content of the pop-up.</param>
+            <remarks>
+            Pop-up will be disposed immediately after disposion of the content control.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="content" /> is <code>null</code>.</exception>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.OnVisibleChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.ToolStripItem.VisibleChanged"/> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>
+            Processes a dialog box key.
+            </summary>
+            <param name="keyData">One of the <see cref="T:System.Windows.Forms.Keys" /> values that represents the key to process.</param>
+            <returns>
+            true if the key was processed by the control; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.UpdateRegion">
+            <summary>
+            Updates the pop-up region.
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.Show(System.Windows.Forms.Control)">
+            <summary>
+            Shows the pop-up window below the specified control.
+            </summary>
+            <param name="control">The control below which the pop-up will be shown.</param>
+            <remarks>
+            When there is no space below the specified control, the pop-up control is shown above it.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="control"/> is <code>null</code>.</exception>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.Show(System.Drawing.Rectangle)">
+            <summary>
+            Shows the pop-up window below the specified area.
+            </summary>
+            <param name="area">The area of desktop below which the pop-up will be shown.</param>
+            <remarks>
+            When there is no space below specified area, the pop-up control is shown above it.
+            </remarks>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.Show(System.Windows.Forms.Control,System.Drawing.Rectangle)">
+            <summary>
+            Shows the pop-up window below the specified area of the specified control.
+            </summary>
+            <param name="control">The control used to compute screen location of specified area.</param>
+            <param name="area">The area of control below which the pop-up will be shown.</param>
+            <remarks>
+            When there is no space below specified area, the pop-up control is shown above it.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException"><paramref name="control"/> is <code>null</code>.</exception>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.OnSizeChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.SizeChanged" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.Layout" /> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.LayoutEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.OnOpening(System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.ToolStripDropDown.Opening" /> event.
+            </summary>
+            <param name="e">A <see cref="T:System.ComponentModel.CancelEventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.OnOpened(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.ToolStripDropDown.Opened" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.OnClosed(System.Windows.Forms.ToolStripDropDownClosedEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.ToolStripDropDown.Closed"/> event.
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.ToolStripDropDownClosedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages.
+            </summary>
+            <param name="m">The Windows <see cref="T:System.Windows.Forms.Message" /> to process.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.ProcessResizing(System.Windows.Forms.Message@)">
+            <summary>
+            Processes the resizing messages.
+            </summary>
+            <param name="m">The message.</param>
+            <returns>true, if the WndProc method from the base class shouldn't be invoked.</returns>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.PaintSizeGrip(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Paints the sizing grip.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Forms.PaintEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="F:Himesyo.WinForm.Popup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Himesyo.WinForm.Popup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Himesyo.WinForm.PopupAnimations">
+            <summary>
+            Types of animation of the pop-up window.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.None">
+            <summary>
+            Uses no animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.LeftToRight">
+            <summary>
+            Animates the window from left to right. This flag can be used with roll or slide animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.RightToLeft">
+            <summary>
+            Animates the window from right to left. This flag can be used with roll or slide animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.TopToBottom">
+            <summary>
+            Animates the window from top to bottom. This flag can be used with roll or slide animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.BottomToTop">
+            <summary>
+            Animates the window from bottom to top. This flag can be used with roll or slide animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.Center">
+            <summary>
+            Makes the window appear to collapse inward if it is hiding or expand outward if the window is showing.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.Slide">
+            <summary>
+            Uses a slide animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.Blend">
+            <summary>
+            Uses a fade effect.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.Roll">
+            <summary>
+            Uses a roll animation.
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PopupAnimations.SystemDefault">
+            <summary>
+            Uses a default animation.
+            </summary>
+        </member>
+        <member name="T:Himesyo.WinForm.PromptTextBox">
+            <summary>
+            表示一个带说明的文本框。
+            </summary>
+        </member>
+        <member name="E:Himesyo.WinForm.PromptTextBox.ValueChange">
+            <summary>
+            文本框的值改变时发生。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.PromptTextBox.#ctor">
+            <summary>
+            初始化新实例。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.TextPrompt">
+            <summary>
+            提示文本
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.Value">
+            <summary>
+            获取或设置文本框的文本值。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.FontPromptText">
+            <summary>
+            提示文本的字体大小是否跟随文本框的字体大小自动改变
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.TextAlignPrompt">
+            <summary>
+            提示文本在文本框垂直方向上的对齐方式
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.Multiline">
+            <summary>
+            是否支持多行文本
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.UseSystemPasswordChar">
+            <summary>
+            获取或设置一个值，该值指示 <see cref="T:System.Windows.Forms.TextBox"/> 控件中的文本是否作为默认密码显示。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.PasswordChar">
+            <summary>
+            获取或设置字符，该字符用于屏蔽单行 <see cref="T:System.Windows.Forms.TextBox"/> 控件中的密码字符。
+            </summary>
+        </member>
+        <member name="P:Himesyo.WinForm.PromptTextBox.TextBox">
+            <summary>
+            所显示的文本框
+            </summary>
+        </member>
+        <member name="F:Himesyo.WinForm.PromptTextBox.components">
+            <summary>
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:Himesyo.WinForm.PromptTextBox.Dispose(System.Boolean)">
+            <summary>
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:Himesyo.WinForm.PromptTextBox.InitializeComponent">
+            <summary>
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+    </members>
+</doc>
