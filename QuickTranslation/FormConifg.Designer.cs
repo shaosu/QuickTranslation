@@ -126,6 +126,7 @@ namespace QuickTranslation
             this.linkFindXml.TabStop = true;
             this.linkFindXml.Tag = "";
             this.linkFindXml.Text = "从哪里可以找到注释文档的XML文件?";
+            this.toolLink.SetToolTip(this.linkFindXml, "https://www.bilibili.com/read/cv15033856");
             this.linkFindXml.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_LinkClicked);
             // 
             // linkSee
