@@ -77,7 +77,7 @@ namespace QuickTranslation
                         {
                             Source = item,
                             Target = new XElement(item),
-                            Original = true
+                            Original = AppMain.Config.ShowOriginal
                         };
                         Analyze(replaceElement);
                         result.Items.Add(replaceElement);
@@ -88,7 +88,7 @@ namespace QuickTranslation
                         replaceText.Source.Add(item);
                         replaceText.Type = TranType.ElementContent;
                         replaceText.Text = ToText(item.Value);
-                        replaceText.Original = true;
+                        replaceText.Original = AppMain.Config.ShowOriginal;
                         result.Items.Add(replaceText);
                     }
                 }

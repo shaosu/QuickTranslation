@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="AppMain.cs" />
     <Compile Include="BaiduTranslator.cs" />
+    <Compile Include="FormConfigApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfigApp.Designer.cs">
+      <DependentUpon>FormConfigApp.cs</DependentUpon>
+    </Compile>
     <Compile Include="FixedThread.cs" />
     <Compile Include="FormConifg.cs">
       <SubType>Form</SubType>
@@ -99,6 +105,9 @@
     <Compile Include="TranslationFile.TranItem.cs" />
     <Compile Include="TranslationFile.TranState.cs" />
     <Compile Include="TranslationFile.TranType.cs" />
+    <EmbeddedResource Include="FormConfigApp.resx">
+      <DependentUpon>FormConfigApp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormConifg.resx">
       <DependentUpon>FormConifg.cs</DependentUpon>
     </EmbeddedResource>

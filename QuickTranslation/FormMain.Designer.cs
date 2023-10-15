@@ -52,6 +52,7 @@ namespace QuickTranslation
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnStartTran = new System.Windows.Forms.Button();
             this.btnOpenOut = new System.Windows.Forms.Button();
+            this.btnConfigApp = new System.Windows.Forms.Button();
             this.tabMain.SuspendLayout();
             this.tabIncomplete.SuspendLayout();
             this.menuManager.SuspendLayout();
@@ -236,7 +237,7 @@ namespace QuickTranslation
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Size = new System.Drawing.Size(105, 46);
             this.btnConfig.TabIndex = 2;
-            this.btnConfig.Text = "配置";
+            this.btnConfig.Text = "配置Key";
             this.btnConfig.UseVisualStyleBackColor = true;
             this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
@@ -265,11 +266,24 @@ namespace QuickTranslation
             this.btnOpenOut.UseVisualStyleBackColor = true;
             this.btnOpenOut.Click += new System.EventHandler(this.btnOpenOut_Click);
             // 
+            // btnConfigApp
+            // 
+            this.btnConfigApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfigApp.Location = new System.Drawing.Point(831, 366);
+            this.btnConfigApp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfigApp.Name = "btnConfigApp";
+            this.btnConfigApp.Size = new System.Drawing.Size(105, 46);
+            this.btnConfigApp.TabIndex = 4;
+            this.btnConfigApp.Text = "配置App";
+            this.btnConfigApp.UseVisualStyleBackColor = true;
+            this.btnConfigApp.Click += new System.EventHandler(this.btnConfigApp_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 486);
+            this.Controls.Add(this.btnConfigApp);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.tabMain);
             this.Controls.Add(this.btnConfig);
@@ -315,6 +329,7 @@ namespace QuickTranslation
         private System.Windows.Forms.Button btnConfig;
         private System.Windows.Forms.Button btnStartTran;
         private System.Windows.Forms.Button btnOpenOut;
+        private System.Windows.Forms.Button btnConfigApp;
     }
 }
 

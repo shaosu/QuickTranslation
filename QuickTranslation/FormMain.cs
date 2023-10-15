@@ -469,5 +469,11 @@ namespace QuickTranslation
                 RunTranslate();
             }
         }
+
+        private void btnConfigApp_Click(object sender, EventArgs e)
+        {
+            FormConfigApp conifg = new FormConfigApp();
+            conifg.ShowDialog();
+        }
     }
 }
