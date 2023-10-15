@@ -20,14 +20,14 @@ namespace QuickTranslation
 
         private void FormConfigApp_Load(object sender, EventArgs e)
         {
-            chkShowOriginal.Checked = AppMain.Config.ShowOriginal;
+            chkOutputOriginal.Checked = AppMain.Config.OutputOriginal;
         }
 
         private void FormConfigApp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (AppMain.Config.ShowOriginal != chkShowOriginal.Checked)
+            if (AppMain.Config.OutputOriginal != chkOutputOriginal.Checked)
             {
-                AppMain.Config.ShowOriginal = chkShowOriginal.Checked;
+                AppMain.Config.OutputOriginal = chkOutputOriginal.Checked;
                 AppMain.SaveConfig();
             }
             

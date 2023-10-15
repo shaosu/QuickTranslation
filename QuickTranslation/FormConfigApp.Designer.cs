@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chkShowOriginal = new System.Windows.Forms.CheckBox();
+            this.chkOutputOriginal = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // chkShowOriginal
+            // chkOutputOriginal
             // 
-            this.chkShowOriginal.AutoSize = true;
-            this.chkShowOriginal.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkShowOriginal.Location = new System.Drawing.Point(13, 13);
-            this.chkShowOriginal.Name = "chkShowOriginal";
-            this.chkShowOriginal.Size = new System.Drawing.Size(116, 19);
-            this.chkShowOriginal.TabIndex = 0;
-            this.chkShowOriginal.Text = "是否显示原文";
-            this.chkShowOriginal.UseVisualStyleBackColor = true;
+            this.chkOutputOriginal.AutoSize = true;
+            this.chkOutputOriginal.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.chkOutputOriginal.Location = new System.Drawing.Point(13, 13);
+            this.chkOutputOriginal.Name = "chkOutputOriginal";
+            this.chkOutputOriginal.Size = new System.Drawing.Size(116, 19);
+            this.chkOutputOriginal.TabIndex = 0;
+            this.chkOutputOriginal.Text = "是否输出原文";
+            this.chkOutputOriginal.UseVisualStyleBackColor = true;
             // 
             // FormConfigApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chkShowOriginal);
+            this.Controls.Add(this.chkOutputOriginal);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormConfigApp";
@@ -62,6 +62,6 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox chkShowOriginal;
+        private System.Windows.Forms.CheckBox chkOutputOriginal;
     }
 }

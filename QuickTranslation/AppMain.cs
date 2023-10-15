@@ -51,6 +51,6 @@ namespace QuickTranslation
     {
         public FileState DefaultState { get; set; } = FileState.Wait;
         public FileState GlobalState { get; set; } = FileState.Translating;
-        public bool ShowOriginal { get; set; } = false;
+        public bool OutputOriginal { get; set; } = false;
     }
 }
